@@ -100,7 +100,47 @@
                     <button type="submit" class="btn btn-primary w-100 btn-lg">Submit Details</button>
                   </div>
                 </div>
-              </form>
+              <!-- यहाँ से पुराना फॉर्म हटाकर यह नया पेस्ट करें -->
+<form class="lead-form" id="lead-form" name="QuickEnquiry" method="POST" data-netlify="true" novalidate>
+  <div class="form-header"><span>Quick Enquiry</span><strong>Get a quote today</strong></div>
+  <div class="row g-3">
+    <div class="col-md-6">
+      <label class="form-label" for="fullName">Full Name</label>
+      <input class="form-control" id="fullName" name="name" autocomplete="name" required>
+      <div class="invalid-feedback">Please enter your full name.</div>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label" for="mobile">Mobile Number</label>
+      <input class="form-control" id="mobile" name="phone" type="tel" inputmode="numeric" autocomplete="tel" pattern="^[6-9][0-9]{9}$" required>
+      <div class="invalid-feedback">Enter a valid 10-digit Indian mobile number.</div>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label" for="email">Email</label>
+      <input class="form-control" id="email" name="email" type="email" autocomplete="email" required>
+      <div class="invalid-feedback">Please enter a valid email address.</div>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label" for="city">City</label>
+      <input class="form-control" id="city" name="city" autocomplete="address-level2" required>
+      <div class="invalid-feedback">Please enter your city.</div>
+    </div>
+    <div class="col-12">
+      <label class="form-label" for="insuranceType">Insurance Type</label>
+      <select class="form-select" id="insuranceType" name="insurance_type" required>
+        <option value="">Select insurance type</option>
+        <option value="Health">Health Insurance</option>
+        <option value="Life">Life Insurance</option>
+        <option value="Motor">Motor Insurance</option>
+        <option value="Travel">Travel Insurance</option>
+        <option value="Business">Business Insurance</option>
+      </select>
+      <div class="invalid-feedback">Please select an insurance type.</div>
+    </div>
+    <div class="col-12 mt-4">
+      <button type="submit" class="btn btn-primary w-100 btn-lg">Submit Details</button>
+    </div>
+  </div>
+</form>
 
             </div>
           </div>
