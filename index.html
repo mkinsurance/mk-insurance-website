@@ -77,13 +77,11 @@
             <div class="hero-panel reveal">
               <img class="hero-image" src="assets/insurance-consultation-hero.png" alt="Insurance advisor consulting an Indian family" width="760" height="520" fetchpriority="high">
               
-              <!-- Aapke form se novalidate hata diya hai taaki khali form submit na ho -->
+              <!-- Final Fixed Web3Forms Form -->
 <form class="lead-form" id="lead-form" action="https://web3forms.com" method="POST">
   
-  <!-- Aapki सुरक्षित Web3Forms Access Key -->
+  <!-- Web3Forms Keys -->
   <input type="hidden" name="access_key" value="cdc2cbbb-12b3-4f5b-ba23-676f4f3035b4">
-  
-  <!-- फॉर्म भरने के बाद यूजर वापस आपकी इसी वेबसाइट पर आ जाए -->
   <input type="hidden" name="redirect" value="https://mkinsurance.co.in">
 
   <div class="form-header"><span>Quick Enquiry</span><strong>Get a quote today</strong></div>
@@ -91,24 +89,25 @@
     
     <div class="col-md-6">
       <label class="form-label" for="fullName">Full Name</label>
-      <!-- Yahan type="text" missing tha, wo jodh diya hai -->
-      <input type="text" class="form-control" id="fullName" name="name" autocomplete="name" required>
+      <!-- Fixed: Added type="text" and standard name="name" -->
+      <input type="text" class="form-control" id="fullName" name="name" placeholder="Your Name" required>
     </div>
     
     <div class="col-md-6">
       <label class="form-label" for="mobile">Mobile Number</label>
-      <input class="form-control" id="mobile" name="phone" type="tel" inputmode="numeric" autocomplete="tel" pattern="^[6-9][0-9]{9}$" required>
+      <!-- Fixed: Using simple text type for compatibility with standard name="phone" -->
+      <input type="text" class="form-control" id="mobile" name="phone" placeholder="10-digit Mobile Number" pattern="^[6-9][0-9]{9}$" required>
     </div>
     
     <div class="col-md-6">
       <label class="form-label" for="email">Email</label>
-      <input class="form-control" id="email" name="email" type="email" autocomplete="email" required>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
     </div>
     
     <div class="col-md-6">
       <label class="form-label" for="city">City</label>
-      <!-- Yahan bhi type="text" jodh diya hai -->
-      <input type="text" class="form-control" id="city" name="city" autocomplete="address-level2" required>
+      <!-- Fixed: Added type="text" and name="city" -->
+      <input type="text" class="form-control" id="city" name="city" placeholder="Your City" required>
     </div>
     
     <div class="col-12">
