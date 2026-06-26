@@ -9,7 +9,7 @@ if(leadForm){
   validateForm(leadForm,form=>{
     const lead=normalizeLead(form);
     const formData = new FormData(form);
-    fetch("https://web3forms.com", {
+    fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formData
     })
@@ -35,7 +35,7 @@ if(leadForm){
 if(callbackForm){
   validateForm(callbackForm,(form)=>{
     const formData = new FormData(form);
-    fetch("https://web3forms.com", {
+    fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formData
     })
